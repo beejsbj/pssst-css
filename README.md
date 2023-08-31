@@ -1,18 +1,8 @@
-# PSSST (CSS)
 
-A CSS methodology so great, it needed a name... ;)
-
-## So far...
-
-on the quest to obtain glory and notoriety in a field where everyone is absolutly terrified of key:value pairs...
-
-* [x] Add base HTML document structure
-* [x] Link CSS file
-* [x] Assemble Voltron
 
 ## Site
 
-[pssst-css.surge.sh](https://pssst-css.surge.sh)
+[beejsbj-pssst-css.surge.sh](https://beejsbj-pssst-css.surge.sh)
 
 ## Some explanation?
 
@@ -28,6 +18,4 @@ You can read @sheriffderek's thoughts [on type-patterns and style guides](https:
 
 Working on [a page with some examples](https://pssst-css.surge.sh/examples.html), but we don't want to complicate the base idea... so, we will see.
 
-That's all for now.
 
-Take this all very seriously. Put your shrieks and grunts into issue form.

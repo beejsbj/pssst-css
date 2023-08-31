@@ -1,29 +1,64 @@
 html {
   /* Black and white */
-  --black: hsla(0, 0%, 0%, 1);
-  --white: hsla(0, 0%, 100%, 1);
-  --gray: hsla(0, 0%, 53%, 1);
-  --gray-light: hsla(0, 0%, 80%, 1);
-  --gray-lighter: hsla(0, 0%, 98%, 1);
-  --gray-dark: hsla(0, 0%, 27%, 1);
+  --hue: 206;
+  --black: hsla(0, 0%, 1%, 1);
+  --white: hsla(var(--hue), 0%, 94%, 1);
 
-  --color: hsla(206, 66%, 77%, 1);
-  --highlight: hsla(190, 90%, 60%, 1);
+  --gray: hsla(var(--hue), 0%, 50%, 1);
+
+  --gray-light: hsla(var(--hue), 0%, 71%, 1);
+  --gray-lighter: hsla(var(--hue), 0%, 90%, 1);
+
+  --gray-dark: hsla(var(--hue), 0%, 26%, 1);
+  --gray-darker: hsla(var(--hue), 0%, 15%, 1);
+
+  /* Colors */
+
+  /* #todo replacce the light and dark with color-mix eventually */
+
+  --color: hsla(var(--hue), 66%, 75%, 1);
+  --color-light: hsla(var(--hue), 65%, 80%, 1);
+  --color-lighter: hsla(var(--hue), 66%, 85%, 1);
+  --color-lightest: hsla(var(--hue), 64%, 95%, 1);
+  --color-dark: hsla(var(--hue), 51%, 46%, 1);
+  --color-darker: hsla(var(--hue), 47%, 27%, 1);
+  --color-darkest: hsla(var(--hue), 40%, 5%, 1);
+
+  --highlight: hsla(calc(var(--hue) - 56), 90%, 60%, 1);
+  --highlight-light: hsla(calc(var(--hue) - 56), 90%, 70%, 1);
+  --highlight-lighter: hsla(calc(var(--hue) - 56), 90%, 80%, 1);
+  --highlight-lightest: hsla(calc(var(--hue) - 56), 90%, 90%, 1);
+  --highlight-dark: hsla(calc(var(--hue) - 56), 90%, 50%, 1);
+  --highlight-darker: hsla(calc(var(--hue) - 56), 90%, 40%, 1);
+  --highlight-darkest: hsla(calc(var(--hue) - 56), 90%, 30%, 1);
+
+  --tertiary-color: hsla(calc(66 + var(--hue)), 77%, 44%, 1);
+  --tertiary-color-light: hsla(calc(66 + var(--hue)), 77%, 54%, 1);
+  --tertiary-color-lighter: hsla(calc(66 + var(--hue)), 77%, 64%, 1);
+  --tertiary-color-lightest: hsla(calc(66 + var(--hue)), 77%, 74%, 1);
+  --tertiary-color-dark: hsla(calc(66 + var(--hue)), 77%, 34%, 1);
+  --tertiary-color-darker: hsla(calc(66 + var(--hue)), 77%, 24%, 1);
+  --tertiary-color-darkest: hsla(calc(66 + var(--hue)), 77%, 14%, 1);
+
+  --success: hsla(122, 85%, 65%, 1);
+  --warning: hsla(44, 85%, 65%, 1);
+  --error: hsla(0, 85%, 65%, 1);
 
   --shadow: var(--black) 5px 5px 50px -25px;
 
   --corners: 10px; /* or whatevers */
 
+  --paper: var(--black);
   --paper: hsla(209, 90%, 50%, 1); /*shadier dodgerblue*/
-  --ink: white;
+  --ink: var(--white);
 
   /* Gradients */
   --gradient-direction: 130deg;
 
   --gradient-dark: linear-gradient(
     var(--gradient-direction),
-    var(--black) 35%,
-    hsla(153, 3%, 15%, 1)
+    var(--paper) 35%,
+    var(--gray-darker)
   );
 
   --gradient-light: linear-gradient(
@@ -34,16 +69,32 @@ html {
 
   --gradient-color: linear-gradient(
     var(--gradient-direction),
-    var(--color),
+    var(--color) 35%,
     var(--highlight)
   );
+  /* Backgrounds */
 
-  /* Textures */
   --texture: url(../images/texture.png);
 
   --checkers: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 8 8'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
   --diagnol: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
   --points: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.2' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+
+  /* Borders */
+  --line-width: 1px;
+  --corners: 1rem;
+
+  --border: var(--line-width) solid var(--gray);
+  --border-dark: var(--line-width) solid var(--gray-dark);
+  --border-light: var(--line-width) solid var(--ink);
+  --border-color: var(--line-width) solid var(--color);
+  --border-highlight: var(--line-width) solid var(--highlight);
+
+  /* Shadows */
+
+  --shadow: var(--highlight) 0px 0px 2em -0.625em;
+
+  --shadow-selected: 2px 2px 1px var(--highlight);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,3 +116,13 @@ html {
     --ink: hsla(0, 0%, 96%, 1); /*whitesmoke*/
   }
 }
+
+/*@media (prefers-color-scheme: light) {
+	html {
+		--paper: var(--white);
+	  --ink: var(--black);
+	  --color-darker: var(--color-lighter);
+	  --color-dark: var(--color-light); 
+	}
+ }
+ */

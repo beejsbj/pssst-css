@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -38,6 +39,11 @@ svg {
 /*// selects for custom elements*/
 :where(:not(:defined)) {
   display: block;
+}
+
+button,
+label {
+  cursor: pointer;
 }
 
 button:hover,

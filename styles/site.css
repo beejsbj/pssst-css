@@ -21,6 +21,7 @@
 @import "modules.css";
 
 /* S ections and more stuff */
+@import "utilities.css";
 
 /* then other contextual styles */
 body {
@@ -31,20 +32,4 @@ body {
 .my-fantastic-image {
   max-width: 300px;
   border-bottom-right-radius: 30px;
-}
-
-.texture {
-  background-image: var(--texture);
-}
-
-.checkers {
-  background-image: var(--checkers);
-}
-
-.diagnol {
-  background-image: var(--diagnol);
-}
-
-.points {
-  background-image: var(--points);
 }
