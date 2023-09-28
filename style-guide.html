@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html lang="en" class="special-magic no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Style Guide</title>
+    <meta
+      name="description"
+      content=" CSS methodology so great, it needed a name."
+    />
+    <meta property="og:image" content="$todo" />
+
+    <link rel="stylesheet" href="styles/site.css" />
+
+    <style>
+      ul {
+        display: grid;
+        gap: var(--gap, 1rem);
+      }
+      @media (min-width: 768px) {
+        ul {
+          --gap: 3rem;
+        }
+      }
+      .colors {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+      div.pallete {
+        width: 100%;
+        height: 100px;
+        border-radius: var(--corners);
+        margin-bottom: 0.5rem;
+        /* text-align: center; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <inner-column>
+        <nav>
+          <a href="index.html">home</a>
+        </nav>
+      </inner-column>
+    </header>
+
+    <main>
+      <section>
+        <inner-column>
+          <h1 class="loud-voice">Style Guide</h1>
+        </inner-column>
+      </section>
+      <section id="color-guide" data-v-03204e9f="">
+        <inner-column class=""
+          ><!--[--><!--[-->
+          <div class="color-guide" data-v-2957c589="">
+            <h2 class="attention-voice" data-v-2957c589="">Colors</h2>
+            <p data-v-2957c589="">
+              These are the colors used in the app. They are defined in
+              <code data-v-2957c589="">settings.css</code> and are available as
+              CSS variables which are used throughout the app.
+            </p>
+            <!--[-->
+            <ul class="colors" data-v-2957c589="">
+              <!--[-->
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--paper)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--paper</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--ink)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--ink</code>
+                </div>
+                <!--]-->
+              </li>
+              <!--]-->
+            </ul>
+            <ul class="colors" data-v-2957c589="">
+              <!--[-->
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--gray)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--gray</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--gray-light)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--gray-light</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--gray-lighter)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--gray-lighter</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--gray-dark)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--gray-dark</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--gray-darker)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--gray-darker</code>
+                </div>
+                <!--]-->
+              </li>
+              <!--]-->
+            </ul>
+            <ul class="colors" data-v-2957c589="">
+              <!--[-->
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--color)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--color</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--highlight)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--highlight</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--tertiary-color)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--tertiary-color</code>
+                </div>
+                <!--]-->
+              </li>
+              <!--]-->
+            </ul>
+            <ul class="colors" data-v-2957c589="">
+              <!--[-->
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--color-light)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--color-light</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--color-lighter)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--color-lighter</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--color-lightest)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--color-lightest</code>
+                </div>
+                <!--]-->
+              </li>
+              <!--]-->
+            </ul>
+            <ul class="colors" data-v-2957c589="">
+              <!--[-->
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--color-dark)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--color-dark</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--color-darker)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--color-darker</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--color-darkest)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--color-darkest</code>
+                </div>
+                <!--]-->
+              </li>
+              <!--]-->
+            </ul>
+            <ul class="colors" data-v-2957c589="">
+              <!--[-->
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--highlight-light)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--highlight-light</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--highlight-lighter)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--highlight-lighter</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--highlight-lightest)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--highlight-lightest</code>
+                </div>
+                <!--]-->
+              </li>
+              <!--]-->
+            </ul>
+            <ul class="colors" data-v-2957c589="">
+              <!--[-->
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--highlight-dark)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--highlight-dark</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--highlight-darker)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--highlight-darker</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--highlight-darkest)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--highlight-darkest</code>
+                </div>
+                <!--]-->
+              </li>
+              <!--]-->
+            </ul>
+            <ul class="colors" data-v-2957c589="">
+              <!--[-->
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--success)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--success</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--warning)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--warning</code>
+                </div>
+                <!--]-->
+              </li>
+              <!--]-->
+            </ul>
+            <ul class="colors" data-v-2957c589="">
+              <!--[-->
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--gradient-dark)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--gradient-dark</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--gradient-light)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--gradient-light</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--gradient-color)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--gradient-color</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--gradient-color-light)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--gradient-color-light</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div
+                  class="pallete"
+                  style="background: var(--gradient-color-dark)"
+                  data-v-2957c589=""
+                ></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">--gradient-color-dark</code>
+                </div>
+                <!--]-->
+              </li>
+              <!--]-->
+            </ul>
+            <ul class="colors" data-v-2957c589="">
+              <!--[-->
+              <li data-v-2957c589="">
+                <!--[-->
+                <div class="checkers pallete" data-v-2957c589=""></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">.checkers</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div class="diagnol pallete" data-v-2957c589=""></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">.diagnol</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div class="points pallete" data-v-2957c589=""></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">.points</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div class="pattern-one pallete" data-v-2957c589=""></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">.pattern-one</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div class="pattern-two pallete" data-v-2957c589=""></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">.pattern-two</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div class="pattern-three pallete" data-v-2957c589=""></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">.pattern-three</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div class="pattern-four pallete" data-v-2957c589=""></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">.pattern-four</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div class="pattern-five pallete" data-v-2957c589=""></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">.pattern-five</code>
+                </div>
+                <!--]-->
+              </li>
+              <li data-v-2957c589="">
+                <!--[-->
+                <div class="pattern-six pallete" data-v-2957c589=""></div>
+                <div class="color-name" data-v-2957c589="">
+                  <code data-v-2957c589="">.pattern-six</code>
+                </div>
+                <!--]-->
+              </li>
+              <!--]-->
+            </ul>
+            <!--]-->
+          </div>
+          <div class="color slider" data-v-2957c589="">
+            <form-field data-v-2957c589=""
+              ><div
+                class="formkit-outer"
+                data-family="text"
+                data-type="range"
+                data-v-2957c589=""
+              >
+                <div class="formkit-wrapper">
+                  <label class="notice-voice" for="input_0">Hue: 160</label>
+                  <div class="formkit-inner">
+                    <!----><!----><input
+                      min="0"
+                      max="360"
+                      step="1"
+                      class="formkit-input"
+                      type="range"
+                      name="range_1"
+                      value="160"
+                      id="input_0"
+                      aria-describedby="help-input_0"
+                    /><!----><!---->
+                  </div>
+                </div>
+                <div class="formkit-help" id="help-input_0">
+                  You can change the hue of the colors by using the slider
+                  below.
+                </div>
+                <!---->
+              </div></form-field
+            >
+          </div>
+          <!--]--><!--]--></inner-column
+        >
+      </section>
+    </main>
+
+    <footer>
+      <h2>Zee footah</h2>
+    </footer>
+  </body>
+</html>
