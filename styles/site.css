@@ -28,8 +28,3 @@ body {
   background-color: var(--paper);
   color: var(--ink);
 }
-
-.my-fantastic-image {
-  max-width: 300px;
-  border-bottom-right-radius: 30px;
-}

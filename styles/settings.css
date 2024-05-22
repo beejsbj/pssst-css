@@ -1,89 +1,39 @@
+/* Colors */
 @import "colors.css";
 
-html {
-  /* Spacing */
-  /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1600,18,1.5,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* Breakpoints */
+:root {
+  @custom-media --small-mobile (width < 450px);
+  @custom-media --mobile (width < 768px);
+  @custom-media --tablet (width >= 768px) and (width < 1024px);
+  @custom-media --desktop (width >= 1024px) and (width < 1440px);
+  @custom-media --large-desktop (width >= 1440px);
+}
 
-  --space-3xs: clamp(0.25rem, 0.23rem + 0.08vw, 0.31rem);
-  --space-2xs: clamp(0.5rem, 0.48rem + 0.08vw, 0.56rem);
-  --space-xs: clamp(0.75rem, 0.72rem + 0.16vw, 0.88rem);
-  --space-s: clamp(1rem, 0.97rem + 0.16vw, 1.13rem);
-  --space-m: clamp(1.5rem, 1.45rem + 0.23vw, 1.69rem);
-  --space-l: clamp(2rem, 1.94rem + 0.31vw, 2.25rem);
-  --space-xl: clamp(3rem, 2.91rem + 0.47vw, 3.38rem);
-  --space-2xl: clamp(4rem, 3.88rem + 0.63vw, 4.5rem);
-  --space-3xl: clamp(6rem, 5.81rem + 0.94vw, 6.75rem);
+/* Spacing */
+/* @link https://utopia.fyi/space/calculator?c=320,16,1.25,1600,18,1.333,7,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,&g=s,l,xl,12 */
+:root {
+  /* Space 3xs: 4px → 5px */
+  --space-3xs: clamp(0.25rem, 0.2344rem + 0.0781vi, 0.3125rem);
+  /* Space 2xs: 8px → 9px */
+  --space-2xs: clamp(0.5rem, 0.4844rem + 0.0781vi, 0.5625rem);
+  /* Space xs: 12px → 14px */
+  --space-xs: clamp(0.75rem, 0.7188rem + 0.1563vi, 0.875rem);
+  /* Space s: 16px → 18px */
+  --space-s: clamp(1rem, 0.9688rem + 0.1563vi, 1.125rem);
+  /* Space m: 24px → 27px */
+  --space-m: clamp(1.5rem, 1.4531rem + 0.2344vi, 1.6875rem);
+  /* Space l: 32px → 36px */
+  --space-l: clamp(2rem, 1.9375rem + 0.3125vi, 2.25rem);
+  /* Space xl: 48px → 54px */
+  --space-xl: clamp(3rem, 2.9063rem + 0.4688vi, 3.375rem);
+  /* Space 2xl: 64px → 72px */
+  --space-2xl: clamp(4rem, 3.875rem + 0.625vi, 4.5rem);
+  /* Space 3xl: 96px → 108px */
+  --space-3xl: clamp(6rem, 5.8125rem + 0.9375vi, 6.75rem);
+}
 
-  /* BW/Shades */
-  --hue: 206;
-  --black: hsla(0, 0%, 1%, 1);
-  --white: hsla(var(--hue), 0%, 94%, 1);
-
-  --gray: hsla(var(--hue), 0%, 50%, 1);
-
-  --gray-light: hsla(var(--hue), 0%, 71%, 1);
-  --gray-lighter: hsla(var(--hue), 0%, 90%, 1);
-
-  --gray-dark: hsla(var(--hue), 0%, 26%, 1);
-  --gray-darker: hsla(var(--hue), 0%, 15%, 1);
-
-  /* Colors */
-
-  /* #todo replacce the light and dark with color-mix eventually */
-
-  --color: hsla(var(--hue), 66%, 75%, 1);
-  --color-light: hsla(var(--hue), 65%, 80%, 1);
-  --color-lighter: hsla(var(--hue), 66%, 85%, 1);
-  --color-lightest: hsla(var(--hue), 64%, 95%, 1);
-  --color-dark: hsla(var(--hue), 51%, 46%, 1);
-  --color-darker: hsla(var(--hue), 47%, 27%, 1);
-  --color-darkest: hsla(var(--hue), 40%, 5%, 1);
-
-  --highlight: hsla(calc(var(--hue) - 56), 90%, 60%, 1);
-  --highlight-light: hsla(calc(var(--hue) - 56), 90%, 70%, 1);
-  --highlight-lighter: hsla(calc(var(--hue) - 56), 90%, 80%, 1);
-  --highlight-lightest: hsla(calc(var(--hue) - 56), 90%, 90%, 1);
-  --highlight-dark: hsla(calc(var(--hue) - 56), 90%, 50%, 1);
-  --highlight-darker: hsla(calc(var(--hue) - 56), 90%, 40%, 1);
-  --highlight-darkest: hsla(calc(var(--hue) - 56), 90%, 30%, 1);
-
-  --tertiary-color: hsla(calc(66 + var(--hue)), 77%, 44%, 1);
-  --tertiary-color-light: hsla(calc(66 + var(--hue)), 77%, 54%, 1);
-  --tertiary-color-lighter: hsla(calc(66 + var(--hue)), 77%, 64%, 1);
-  --tertiary-color-lightest: hsla(calc(66 + var(--hue)), 77%, 74%, 1);
-  --tertiary-color-dark: hsla(calc(66 + var(--hue)), 77%, 34%, 1);
-  --tertiary-color-darker: hsla(calc(66 + var(--hue)), 77%, 24%, 1);
-  --tertiary-color-darkest: hsla(calc(66 + var(--hue)), 77%, 14%, 1);
-
-  --success: hsla(122, 85%, 65%, 1);
-  --warning: hsla(44, 85%, 65%, 1);
-  --error: hsla(0, 85%, 65%, 1);
-
-  --paper: var(--black);
-  --paper: hsla(209, 90%, 50%, 1); /*shadier dodgerblue*/
-  --ink: var(--white);
-
-  /* Gradients */
-  --gradient-direction: 130deg;
-
-  --gradient-dark: linear-gradient(
-    var(--gradient-direction),
-    var(--paper) 35%,
-    var(--gray-darker)
-  );
-
-  --gradient-light: linear-gradient(
-    var(--gradient-direction),
-    var(--gray-light) 35%,
-    var(--white)
-  );
-
-  --gradient-color: linear-gradient(
-    var(--gradient-direction),
-    var(--color) 35%,
-    var(--highlight)
-  );
-
+:root {
   /* Backgrounds */
   --texture: url(../images/texture.png);
 
@@ -93,47 +43,32 @@ html {
 
   --points: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.2' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 
-  /* Borders */
-  --line-width: 1px;
-  --corners: 1rem;
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cscript xmlns=''/%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeBlend mode='screen'/%3E%3C/filter%3E%3Crect width='500' height='500' filter='url(%23noise)' opacity='0.5'/%3E%3Cscript xmlns=''/%3E%3C/svg%3E");
 
-  --border: var(--line-width) solid var(--gray);
-  --border-dark: var(--line-width) solid var(--gray-dark);
-  --border-light: var(--line-width) solid var(--ink);
-  --border-color: var(--line-width) solid var(--color);
-  --border-highlight: var(--line-width) solid var(--highlight);
+  --noise-filter: contrast(1.25) brightness(1.25);
 
   /* Shadows */
-  --shadow: var(--highlight) 0px 0px 2em -0.625em;
-  --shadow-selected: 2px 2px 1px var(--highlight);
+  --shadow: var(--black) 0px 0px 2em -0.625em;
+  --shadow-inner: inset 0 0 1em 0.25em var(--black);
+  --shadow-text: 0 0 0.25em var(--black);
+
+  /* Borders */
+  --line-width: 1px;
+  --line-width-lg: 5px;
+  --corners: 0.25rem;
+  --corners-lg: 1rem;
+  --corners-round: 999rem;
+
+  --border: var(--line-width) solid;
+  --border-dark: var(--line-width) solid var(--gray-dark);
+  --border-light: var(--line-width) solid var(--gray-light);
+  --border-color: var(--line-width) solid var(--color);
+  --border-highlight: var(--line-width) solid var(--highlight);
+  --border-accent: var(--line-width) solid var(--accent);
+
+  /* Ratios */
+  --ratio-square: 1/1;
+  --ratio-lanscape: 16/9;
+  --ratio-portrait: 9/16;
+  --ratio-golden: 1.618/1;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    --black: #111111;
-    --white: #efefef;
-
-    --neutral-stuffs: gray;
-
-    --color: hsla(206, 66%, 47%, 1);
-    --highlight: hsla(190, 90%, 40%, 1);
-
-    --shadow: rgba(0, 0, 0, 0.8);
-
-    --corners: 10px; /* or whatevers */
-
-    --paper: hsla(217, 8%, 13%, 1);
-    --paper2: hsla(217, 6%, 17%, 1); /*bunker*/
-    --ink: hsla(0, 0%, 96%, 1); /*whitesmoke*/
-  }
-}
-
-/*@media (prefers-color-scheme: light) {
-	html {
-		--paper: var(--white);
-	  --ink: var(--black);
-	  --color-darker: var(--color-lighter);
-	  --color-dark: var(--color-light); 
-	}
- }
- */

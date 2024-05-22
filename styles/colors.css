@@ -1,50 +1,187 @@
-html {
+:root {
   /* Black and white */
-  --hue: 206;
-  --black: hsla(0, 0%, 1%, 1);
-  --white: hsla(var(--hue), 0%, 94%, 1);
+  --black: oklch(0% 0% 0);
+  --white: oklch(100% 0% 0);
 
-  --gray: hsla(var(--hue), 0%, 50%, 1);
+  --paper: var(--white);
+  --ink: var(--black);
 
-  --gray-light: hsla(var(--hue), 0%, 71%, 1);
-  --gray-lighter: hsla(var(--hue), 0%, 90%, 1);
+  --gray: oklch(50% 0% 0);
 
-  --gray-dark: hsla(var(--hue), 0%, 26%, 1);
-  --gray-darker: hsla(var(--hue), 0%, 15%, 1);
+  --gray-light: oklch(70% 0% 0);
+  --gray-lighter: oklch(90% 0% 0);
+  --gray-lightest: oklch(95% 0% 0);
 
+  --gray-dark: oklch(40% 0% 0);
+  --gray-darker: oklch(30% 0% 0);
+  --gray-darkest: oklch(10% 0% 0);
+
+  /* #todo use relative colors  */
   /* Colors */
+  --lightness: 50%;
+  --chroma: 80%;
+  --hue: 250;
 
-  /* #todo replacce the light and dark with color-mix eventually */
+  --color: oklch(var(--lightness) var(--chroma) var(--hue));
+  --color-light: color-mix(
+    in oklch,
+    var(--color),
+    oklch(100% var(--chroma) var(--hue))
+  );
+  --color-lighter: color-mix(
+    in oklch,
+    var(--color-light),
+    oklch(100% var(--chroma) var(--hue))
+  );
+  --color-lightest: color-mix(
+    in oklch,
+    var(--color-lighter),
+    oklch(100% var(--chroma) var(--hue))
+  );
+  --color-dark: color-mix(
+    in oklch,
+    var(--color),
+    oklch(0% var(--chroma) var(--hue))
+  );
+  --color-darker: color-mix(
+    in oklch,
+    var(--color-dark),
+    oklch(0% var(--chroma) var(--hue))
+  );
+  --color-darkest: color-mix(
+    in oklch,
+    var(--color-darker),
+    oklch(0% var(--chroma) var(--hue))
+  );
 
-  --color: hsla(var(--hue), 66%, 75%, 1);
-  --color-light: hsla(var(--hue), 65%, 80%, 1);
-  --color-lighter: hsla(var(--hue), 66%, 85%, 1);
-  --color-lightest: hsla(var(--hue), 64%, 95%, 1);
-  --color-dark: hsla(var(--hue), 51%, 46%, 1);
-  --color-darker: hsla(var(--hue), 47%, 27%, 1);
-  --color-darkest: hsla(var(--hue), 40%, 5%, 1);
+  /* Highlight */
+  --highlight-lightness: 60%;
+  --highlight-chroma: 90%;
+  --highlight-hue: calc(var(--hue) - 56);
 
-  --highlight: hsla(calc(var(--hue) - 56), 90%, 60%, 1);
-  --highlight-light: hsla(calc(var(--hue) - 56), 90%, 70%, 1);
-  --highlight-lighter: hsla(calc(var(--hue) - 56), 90%, 80%, 1);
-  --highlight-lightest: hsla(calc(var(--hue) - 56), 90%, 90%, 1);
-  --highlight-dark: hsla(calc(var(--hue) - 56), 90%, 50%, 1);
-  --highlight-darker: hsla(calc(var(--hue) - 56), 90%, 40%, 1);
-  --highlight-darkest: hsla(calc(var(--hue) - 56), 90%, 30%, 1);
+  --highlight: oklch(
+    var(--highlight-lightness) var(--highlight-chroma) var(--highlight-hue)
+  );
 
-  --tertiary-color: hsla(calc(66 + var(--hue)), 77%, 44%, 1);
-  --tertiary-color-light: hsla(calc(66 + var(--hue)), 77%, 54%, 1);
-  --tertiary-color-lighter: hsla(calc(66 + var(--hue)), 77%, 64%, 1);
-  --tertiary-color-lightest: hsla(calc(66 + var(--hue)), 77%, 74%, 1);
-  --tertiary-color-dark: hsla(calc(66 + var(--hue)), 77%, 34%, 1);
-  --tertiary-color-darker: hsla(calc(66 + var(--hue)), 77%, 24%, 1);
-  --tertiary-color-darkest: hsla(calc(66 + var(--hue)), 77%, 14%, 1);
+  --highlight-light: color-mix(
+    in oklch,
+    var(--highlight),
+    oklch(100% var(--highlight-chroma) var(--highlight-hue))
+  );
+  --highlight-lighter: color-mix(
+    in oklch,
+    var(--highlight-light),
+    oklch(100% var(--highlight-chroma) var(--highlight-hue))
+  );
+  --highlight-lightest: color-mix(
+    in oklch,
+    var(--highlight-lighter),
+    oklch(100% var(--highlight-chroma) var(--highlight-hue))
+  );
+  --highlight-dark: color-mix(
+    in oklch,
+    var(--highlight),
+    oklch(0% var(--highlight-chroma) var(--highlight-hue))
+  );
+  --highlight-darker: color-mix(
+    in oklch,
+    var(--highlight-dark),
+    oklch(0% var(--highlight-chroma) var(--highlight-hue))
+  );
+  --highlight-darkest: color-mix(
+    in oklch,
+    var(--highlight-darker),
+    oklch(0% var(--highlight-chroma) var(--highlight-hue))
+  );
 
-  --success: hsla(122, 85%, 65%, 1);
-  --warning: hsla(44, 85%, 65%, 1);
-  --error: hsla(0, 85%, 65%, 1);
+  /*  Accent */
+  --accent-lightness: 50%;
+  --accent-hue: calc(var(--hue) + 66);
+  --accent-chroma: 77%;
 
-  --paper: var(--black);
-  --paper: hsla(209, 90%, 50%, 1); /*shadier dodgerblue*/
-  --ink: var(--white);
+  --accent: oklch(
+    var(--accent-lightness) var(--accent-chroma) var(--accent-hue)
+  );
+
+  --accent-light: color-mix(
+    in oklch,
+    var(--accent),
+    oklch(100% var(--accent-chroma) var(--accent-hue))
+  );
+
+  --accent-lighter: color-mix(
+    in oklch,
+    var(--accent-light),
+    oklch(100% var(--accent-chroma) var(--accent-hue))
+  );
+
+  --accent-lightest: color-mix(
+    in oklch,
+    var(--accent-lighter),
+    oklch(100% var(--accent-chroma) var(--accent-hue))
+  );
+
+  --accent-dark: color-mix(
+    in oklch,
+    var(--accent),
+    oklch(0% var(--accent-chroma) var(--accent-hue))
+  );
+
+  --accent-darker: color-mix(
+    in oklch,
+    var(--accent-dark),
+    oklch(0% var(--accent-chroma) var(--accent-hue))
+  );
+
+  --accent-darkest: color-mix(
+    in oklch,
+    var(--accent-darker),
+    oklch(0% var(--accent-chroma) var(--accent-hue))
+  );
+
+  --success: oklch(65% 100% 122);
+  --warning: oklch(65% 100% 85);
+  --error: oklch(65% 100% 45);
+
+  /* Gradients */
+
+  --gradient-direction: 130deg;
+
+  --gradient-dark: linear-gradient(
+    var(--gradient-direction),
+    var(--paper) 35%,
+    var(--gray-darker)
+  );
+
+  --gradient-light: linear-gradient(
+    var(--gradient-direction),
+    var(--gray-light) 35%,
+    var(--white)
+  );
+
+  --gradient-color: linear-gradient(
+    var(--gradient-direction),
+    var(--color) 35%,
+    var(--highlight)
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --hue: 83;
+  }
+
+  [data-theme="light"] {
+    --hue: 29;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    --hue: 29;
+  }
+
+  [data-theme="dark"] {
+    --hue: 83;
+  }
 }

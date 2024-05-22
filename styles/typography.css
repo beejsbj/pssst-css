@@ -1,36 +1,36 @@
 /* Should we pull in @fonts here? */
 /* don't think you can... might have to be higher up (the top of) the food chain! */
 
-html {
+:root {
   /* Family */
-  --font1: serif;
-  --font2: sans-serif;
+  --font-head: ui-serif, serif;
+  --font-body: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif;
 
   /* Size */
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1600,18,1.5,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  /* Step -2: 11.11px → 9.00px */
-  --step--2: clamp(0.5625rem, 0.7301rem + -0.1788vw, 0.6944rem);
-
-  /* Step -1: 13.33px → 12.00px */
-  --step--1: clamp(0.75rem, 0.8557rem + -0.1127vw, 0.8331rem);
-
-  /* Step 0: 16.00px → 16.00px */
-  --step-0: clamp(1rem, 1rem + 0vw, 1rem);
-
-  /* Step 1: 19.20px → 21.33px */
-  --step-1: clamp(1.2rem, 1.1639rem + 0.1805vw, 1.3331rem);
-
-  /* Step 2: 23.04px → 28.43px */
-  --step-2: clamp(1.44rem, 1.3486rem + 0.4568vw, 1.7769rem);
-
-  /* Step 3: 27.65px → 37.90px */
-  --step-3: clamp(1.7281rem, 1.5544rem + 0.8686vw, 2.3688rem);
-
-  /* Step 4: 33.18px → 50.52px */
-  --step-4: clamp(2.0738rem, 1.7799rem + 1.4695vw, 3.1575rem);
-
-  /* Step 5: 39.81px → 67.34px */
-  --step-5: clamp(2.4881rem, 2.0215rem + 2.3331vw, 4.2088rem);
+  /* Step -3: 8.192px → 7.5994px */
+  --font-size--3: clamp(0.475rem, 0.5213rem + -0.0463vi, 0.512rem);
+  /* Step -2: 10.24px → 10.1301px */
+  --font-size--2: clamp(0.6331rem, 0.6417rem + -0.0086vi, 0.64rem);
+  /* Step -1: 12.8px → 13.5034px */
+  --font-size--1: clamp(0.8rem, 0.789rem + 0.055vi, 0.844rem);
+  /* Step 0: 16px → 18px */
+  --font-size-0: clamp(1rem, 0.9688rem + 0.1563vi, 1.125rem);
+  /* Step 1: 20px → 23.994px */
+  --font-size-1: clamp(1.25rem, 1.1876rem + 0.312vi, 1.4996rem);
+  /* Step 2: 25px → 31.984px */
+  --font-size-2: clamp(1.5625rem, 1.4534rem + 0.5456vi, 1.999rem);
+  /* Step 3: 31.25px → 42.6347px */
+  --font-size-3: clamp(1.9531rem, 1.7752rem + 0.8894vi, 2.6647rem);
+  /* Step 4: 39.0625px → 56.832px */
+  --font-size-4: clamp(2.4414rem, 2.1638rem + 1.3882vi, 3.552rem);
+  /* Step 5: 48.8281px → 75.7571px */
+  --font-size-5: clamp(3.0518rem, 2.631rem + 2.1038vi, 4.7348rem);
+  /* Step 6: 61.0352px → 100.9842px */
+  --font-size-6: clamp(3.8147rem, 3.1905rem + 3.121vi, 6.3115rem);
+  /* Step 7: 76.2939px → 134.6119px */
+  --font-size-7: clamp(4.7684rem, 3.8572rem + 4.5561vi, 8.4132rem);
 
   /* Weight */
   --weight-heavy: 700;
@@ -38,19 +38,25 @@ html {
   --weight-light: 200;
 
   /* Line Height */
-  --line-height: 1.4;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+
+  /* letter spacing */
+  --letter-spacing-head: 0.05em;
+  --letter-spacing-body: 0.02em;
 }
 
 .booming-voice {
-  font-family: var(--font1);
-  font-size: var(--step-5);
-
+  font-family: var(--font-head);
+  font-size: var(--font-size-5);
   font-weight: var(--weight-heavy);
+  line-height: var(--line-height-heading);
 }
 
 .loud-voice {
-  font-family: var(--font2);
-  font-size: var(--step-4);
+  font-family: var(--font-body);
+  font-size: var(--font-size-4);
+  line-height: var(--line-height-heading);
 }
 
 @media (min-width: 600px) {
@@ -60,28 +66,30 @@ html {
 }
 
 .attention-voice {
-  font-family: var(--font2);
-  font-size: var(--step-3);
+  font-family: var(--font-body);
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-heading);
 }
 
 .firm-voice {
-  font-family: var(--font2);
-  font-size: var(--step-2);
+  font-family: var(--font-body);
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-heading);
 }
 
 .notice-voice {
-  font-family: var(--font2);
-  font-size: var(--step-1);
-  line-height: var(--line-height);
+  font-family: var(--font-body);
+  font-size: var(--font-size-1);
+  line-height: var(--line-height-body);
 }
 
 .calm-voice,
 p,
 li,
 label {
-  font-family: var(--font2);
-  font-size: var(--step-0);
-  line-height: var(--line-height);
+  font-family: var(--font-body);
+  font-size: var(--font-size-0);
+  line-height: var(--line-height-body);
 }
 
 em {
@@ -93,18 +101,23 @@ strong {
 }
 
 .whisper-voice {
-  font-size: var(--step--1);
-
+  font-family: var(--font-body);
+  font-size: var(--font-size--1);
   color: var(--gray-lighter, #999);
+  line-height: var(--line-height-body);
 }
 
 .solid-voice {
-  font-size: var(--step--1);
+  font-family: var(--font-body);
+  font-size: var(--font-size--1);
   font-weight: var(--weight-heavy);
+  line-height: var(--line-height-body);
 }
 
 .micro-voice {
-  font-size: var(--step--2);
+  font-family: var(--font-body);
+  font-size: var(--font-size--2);
+  line-height: var(--line-height-body);
 }
 
 /* these would be scoped to section or to an article element */
@@ -120,6 +133,7 @@ h2 + p {
 
 code {
   font-family: monospace;
-  font-size: var(--step--1);
+  font-size: var(--font-size--1);
   color: green;
+  background: var(--gray);
 }
