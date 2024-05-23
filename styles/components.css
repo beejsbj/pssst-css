@@ -2,6 +2,89 @@
 
 @import "forms.css";
 
+/* Buttons */
+
+button,
+a {
+  background: none;
+  cursor: pointer;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: var(--weight-medium);
+  outline: unset;
+}
+
+:is(button, a):is(:disabled, .disabled) {
+  filter: grayscale(1) saturate(0.5);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* primary button */
+
+.button {
+  padding: 1em 2em;
+  position: relative;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  background: var(--color-lighter);
+  border-radius: var(--corners);
+}
+
+.button:is(:hover, .hover, :focus-visible, .focus) {
+  background: var(--color-light);
+  transition: 0.1s;
+  scale: 1.05;
+}
+
+.button:is(:active, .active) {
+  background: var(--color);
+  transform: scale(0.95);
+}
+
+/* outline button / seconadry button */
+
+.button.outline {
+  background: none;
+  border: var(--border-light);
+}
+
+.button.outline:is(:hover, :focus-visible, .hover) {
+  color: var(--color);
+  border-color: var(--color);
+}
+.button.outline:active {
+  color: var(--color-light);
+  border-color: var(--color-light);
+}
+
+/* icon-button */
+
+.button.icon {
+  padding: 0.5em;
+  aspect-ratio: var(--ratio-square);
+  line-height: 0;
+  border-radius: var(--corners-round);
+}
+
+/* Text buttons and acnhors  */
+:is(button, a).text {
+  padding: 0.5em 1em;
+  background: none;
+  border: none;
+  color: var(--ink);
+}
+p :is(button, a).text {
+  padding: 0;
+}
+.text:is(:hover, :focus-visible) {
+  color: var(--color) !important;
+}
+.text:active {
+  color: var(--color-dark) !important;
+}
+
 /* scrollbar */
 * {
   -ms-overflow-style: none; /* IE and Edge */

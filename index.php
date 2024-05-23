@@ -3,12 +3,21 @@
 $modules = [
 	// 'navigation',
 	'color-guide',
-	// 'backgrounds-textures-guide',
-	// 'ui-elements-guide',
+	'misc-guide',
+	'spacing-guide',
+	'ui-elements-guide',
 	// 'forms-guide',
 	// 'typography-guide',
 	// 'typography-voices'
-]
+];
+
+function showErrors()
+{
+	error_reporting(E_ALL);
+	ini_set('display_errors', '1');
+}
+showErrors();
+
 ?>
 
 
@@ -41,7 +50,10 @@ $modules = [
 	<main>
 		<section>
 			<inner-column>
-				<h1 class="loud-voice">Header</h1>
+				<h1 class="booming-voice">Style Guide</h1>
+				<p>
+					These are the design tokens used to create the visual design of this site.
+				</p>
 			</inner-column>
 		</section>
 

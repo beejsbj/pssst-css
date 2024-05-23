@@ -1,23 +1,3 @@
-<style>
-	ul.colors {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-
-		@media (min-width: 768px) {
-			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		}
-	}
-
-	div.pallete {
-		width: 100%;
-		height: 100px;
-		border-radius: var(--corners);
-		margin-bottom: var(--space-2xs);
-		/* text-align: center; */
-	}
-</style>
-
-
 <?php
 
 $colorGroups = [
@@ -40,6 +20,10 @@ $colorGroups = [
 		"heading" => "Grays",
 		"colors" => [
 			[
+				"name" => "Gray Lightest",
+				"variable" => "--gray-lightest",
+			],
+			[
 				"name" => "Gray Lighter",
 				"variable" => "--gray-lighter",
 			],
@@ -50,6 +34,7 @@ $colorGroups = [
 			[
 				"name" => "Gray",
 				"variable" => "--gray",
+				"class" => "base"
 			],
 			[
 				"name" => "Gray Dark",
@@ -58,6 +43,10 @@ $colorGroups = [
 			[
 				"name" => "Gray Darker",
 				"variable" => "--gray-darker",
+			],
+			[
+				"name" => "Gray Darkest",
+				"variable" => "--gray-darkest",
 			],
 		]
 	],
@@ -80,6 +69,8 @@ $colorGroups = [
 			[
 				"name" => "Primary",
 				"variable" => "--color",
+				"class" => "base"
+
 			],
 			[
 				"name" => "Primary Dark",
@@ -97,67 +88,69 @@ $colorGroups = [
 	],
 
 	[
-		"heading" => "Secondary Color",
+		"heading" => "Highlight Color",
 		"colors" => [
 			[
-				"name" => "Secondary Lightest",
+				"name" => "Highlight Lightest",
 				"variable" => "--highlight-lightest",
 			],
 			[
-				"name" => "Secondary Lighter",
+				"name" => "Highlight Lighter",
 				"variable" => "--highlight-lighter",
 			],
 			[
-				"name" => "Secondary Light",
+				"name" => "Highlight Light",
 				"variable" => "--highlight-light",
 			],
 			[
-				"name" => "Secondary",
+				"name" => "Highlight",
 				"variable" => "--highlight",
+				"class" => "base"
 			],
 			[
-				"name" => "Secondary Dark",
+				"name" => "Highlight Dark",
 				"variable" => "--highlight-dark",
 			],
 			[
-				"name" => "Secondary Darker",
+				"name" => "Highlight Darker",
 				"variable" => "--highlight-darker",
 			],
 			[
-				"name" => "Secondary Darkest",
+				"name" => "Highlight Darkest",
 				"variable" => "--highlight-darkest",
 			],
 		]
 	],
 	[
-		"heading" => "Tertiary Color",
+		"heading" => "Accent Color",
 		"colors" => [
 			[
-				"name" => "Tertiary Lightest",
+				"name" => "Accent Lightest",
 				"variable" => "--accent-lightest",
 			],
 			[
-				"name" => "Tertiary Lighter",
+				"name" => "Accent Lighter",
 				"variable" => "--accent-lighter",
 			],
 			[
-				"name" => "Tertiary Light",
+				"name" => "Accent Light",
 				"variable" => "--accent-light",
 			],
 			[
-				"name" => "Tertiary",
+				"name" => "Accent",
 				"variable" => "--accent",
+				"class" => "base"
 			],
 			[
-				"name" => "Tertiary Dark",
+				"name" => "Accent Dark",
 				"variable" => "--accent-dark",
 			],
 			[
-				"name" => "Tertiary Darker",
+				"name" => "Accent Darker",
 				"variable" => "--accent-darker",
 			],
 			[
-				"name" => "Tertiary Darkest",
+				"name" => "Accent Darkest",
 				"variable" => "--accent-darkest",
 			],
 		]
@@ -189,22 +182,86 @@ $colorGroups = [
 		"colors" => [
 			[
 				"name" => "Gradient Dark",
-				"variable" => "--gradient-dark",
+				"variable-img" => "--gradient-dark",
 			],
 			[
 				"name" => "Gradient Light",
-				"variable" => "--gradient-light",
+				"variable-img" => "--gradient-light",
 			],
 			[
 				"name" => "Gradient Color",
-				"variable" => "--gradient-color",
+				"variable-img" => "--gradient-color",
 			],
 		]
 	],
-
+	[
+		"heading" => "Patterns",
+		"colors" => [
+			[
+				"name" => "Checkers",
+				"variable" => "--gray",
+				"variable-img" => "--checkers",
+			],
+			[
+				"name" => "Diagnol",
+				"variable" => "--gray",
+				"variable-img" => "--diagnol",
+			],
+			[
+				"name" => "Points",
+				"variable" => "--gray",
+				"variable-img" => "--points",
+			],
+			[
+				"name" => "Noise",
+				"variable" => "--gray",
+				"variable-img" => "--noise",
+				"class" => "noise"
+			]
+		]
+	],
 ];
 ?>
 
+
+<style>
+	ul.color-groups {
+		display: grid;
+		gap: var(--space-l);
+		margin-top: var(--space-l);
+	}
+
+	ul.colors {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		gap: var(--space-s);
+
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+		}
+	}
+
+	ul.colors div.pallete {
+		width: 100%;
+		aspect-ratio: var(--ratio-square);
+		border-radius: var(--corners);
+		margin-bottom: var(--space-2xs);
+		background-color: var(--pallete);
+		background-image: var(--pallete-img);
+		/* text-align: center; */
+	}
+
+
+	ul.colors div.pallete.base {
+		outline: 5px solid var(--ink);
+	}
+
+
+	ul.colors div.pallete.noise {
+
+		filter: var(--noise-filter);
+	}
+</style>
 
 <div class="color-guide">
 	<h2 class="attention-voice">Colors</h2>
@@ -217,16 +274,44 @@ $colorGroups = [
 	<ul class="color-groups">
 		<?php foreach ($colorGroups as $colorGroup) { ?>
 			<li>
-				<h3>
+				<h3 class="notice-voice">
 					<?= $colorGroup['heading'] ?>
 				</h3>
 				<ul class="colors">
-					<?php foreach ($colorGroup['colors'] as $color) { ?>
+					<?php foreach ($colorGroup['colors'] as $color) {
+
+
+						$variable = '';
+						$class = 'pallete';
+						$varImg = '';
+						$style = '';
+						$code = '';
+
+						if (isset($color['variable'])) {
+							$variable = $color['variable'];
+							$style = "--pallete: var($variable);";
+							$code = $variable;
+						}
+
+						if (isset($color['class'])) {
+							$class = $color['class'] . " pallete";
+						}
+
+						if (isset($color['variable-img'])) {
+							$varImg = $color['variable-img'];
+							$style = $style . " --pallete-img: var($varImg);";
+							$code = $varImg;
+						}
+
+					?>
 						<li>
-							<div class="pallete" style="background: var(<?= $color['variable']; ?>)">
+							<h4 class="whisper-voice">
+								<?= $color['name'] ?>
+							</h4>
+							<div class="<?= $class ?>" style="<?= $style ?>">
 							</div>
 							<p class="color-name">
-								<code><?= $color['variable']; ?></code>
+								<code><?= $code ?></code>
 							</p>
 						</li>
 					<?php } ?>

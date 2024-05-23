@@ -8,19 +8,19 @@
 
   --gray: oklch(50% 0% 0);
 
-  --gray-light: oklch(70% 0% 0);
-  --gray-lighter: oklch(90% 0% 0);
+  --gray-light: oklch(65% 0% 0);
+  --gray-lighter: oklch(80% 0% 0);
   --gray-lightest: oklch(95% 0% 0);
 
-  --gray-dark: oklch(40% 0% 0);
-  --gray-darker: oklch(30% 0% 0);
-  --gray-darkest: oklch(10% 0% 0);
+  --gray-dark: oklch(35% 0% 0);
+  --gray-darker: oklch(20% 0% 0);
+  --gray-darkest: oklch(5% 0% 0);
 
   /* #todo use relative colors  */
   /* Colors */
   --lightness: 50%;
   --chroma: 80%;
-  --hue: 250;
+  --hue: 0;
 
   --color: oklch(var(--lightness) var(--chroma) var(--hue));
   --color-light: color-mix(
@@ -57,7 +57,7 @@
   /* Highlight */
   --highlight-lightness: 60%;
   --highlight-chroma: 90%;
-  --highlight-hue: calc(var(--hue) - 56);
+  --highlight-hue: calc(var(--hue) + 120);
 
   --highlight: oklch(
     var(--highlight-lightness) var(--highlight-chroma) var(--highlight-hue)
@@ -96,7 +96,7 @@
 
   /*  Accent */
   --accent-lightness: 50%;
-  --accent-hue: calc(var(--hue) + 66);
+  --accent-hue: calc(var(--hue) - 120);
   --accent-chroma: 77%;
 
   --accent: oklch(
@@ -142,6 +142,7 @@
   --success: oklch(65% 100% 122);
   --warning: oklch(65% 100% 85);
   --error: oklch(65% 100% 45);
+  --info: oklch(65% 100% 200);
 
   /* Gradients */
 
