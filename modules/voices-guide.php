@@ -24,7 +24,7 @@ $voices = [
 
 
 <div class="text-voices">
-	<h2 class="attention-voice">Text Voices</h2>
+	<h2 class="attention-voice">Type Voices</h2>
 	<ul>
 
 

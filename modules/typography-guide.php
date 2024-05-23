@@ -183,3 +183,24 @@ $groups = [
 		<?php } ?>
 	</ul>
 </div>
+
+
+<script>
+	function setFontDetails() {
+		const voices = document.querySelectorAll('voice-card');
+		voices.forEach(voice => {
+			const voiceName = voice.dataset.voice;
+			const paragraph = voice.querySelector(`p.${voiceName}`);
+			const family = window.getComputedStyle(paragraph).fontFamily;
+			const size = window.getComputedStyle(paragraph).fontSize;
+			voice.querySelector('.family').innerText = family;
+			voice.querySelector('.size').innerText = size;
+		});
+
+
+	}
+
+	setFontDetails();
+
+	window.addEventListener('resize', setFontDetails);
+</script>
