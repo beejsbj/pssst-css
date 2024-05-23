@@ -10,12 +10,6 @@ $modules = [
 	'voices-guide'
 ];
 
-function showErrors()
-{
-	error_reporting(E_ALL);
-	ini_set('display_errors', '1');
-}
-showErrors();
 
 $stylesheetLink = '';
 
