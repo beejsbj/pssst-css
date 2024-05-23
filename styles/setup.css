@@ -20,6 +20,11 @@ p a {
   text-decoration: underline;
 }
 
+:is(li, p) :is(button, a).text {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 picture {
   display: block;
   overflow: hidden;

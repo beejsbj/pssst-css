@@ -1,4 +1,4 @@
-:root {
+html {
   /* Black and white */
   --black: oklch(0% 0% 0);
   --white: oklch(100% 0% 0);
@@ -18,7 +18,7 @@
 
   /* #todo use relative colors  */
   /* Colors */
-  --lightness: 50%;
+  --lightness: 80%;
   --chroma: 80%;
   --hue: 0;
 
@@ -139,10 +139,10 @@
     oklch(0% var(--accent-chroma) var(--accent-hue))
   );
 
-  --success: oklch(65% 100% 122);
-  --warning: oklch(65% 100% 85);
-  --error: oklch(65% 100% 45);
-  --info: oklch(65% 100% 200);
+  --success: oklch(95% 100% 160);
+  --warning: oklch(95% 100% 110);
+  --error: oklch(95% 100% 45);
+  --info: oklch(95% 100% 200);
 
   /* Gradients */
 

@@ -17,6 +17,13 @@ function showErrors()
 }
 showErrors();
 
+$stylesheetLink = '';
+
+if (isset($_GET['stylesheet'])) {
+	$stylesheet = $_GET['stylesheet'];
+	$stylesheetLink = "<link rel='stylesheet' href='$stylesheet' />";
+}
+
 ?>
 
 
@@ -37,6 +44,7 @@ showErrors();
 	<meta property="og:image" content="$todo" />
 
 	<link rel="stylesheet" href="styles/site.css" />
+	<?= $stylesheetLink ?>
 </head>
 
 <body>
