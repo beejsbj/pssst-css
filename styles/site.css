@@ -28,3 +28,8 @@ body {
   background-color: var(--paper);
   color: var(--ink);
 }
+
+.guide-nav ul {
+  margin-top: var(--space-m);
+  display: grid;
+}

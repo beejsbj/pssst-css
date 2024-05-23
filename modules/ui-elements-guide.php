@@ -36,10 +36,14 @@ $elements = [
 	}
 
 	ul.elements {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		display: flex;
+		flex-wrap: wrap;
 		gap: var(--space-s);
 		margin-top: var(--space-s);
+
+		li {
+			flex: 1;
+		}
 
 
 		@media (min-width: 768px) {
@@ -88,6 +92,14 @@ $elements = [
 							Active
 						</h4>
 						<button class="active <?= $element['class'] ?>">
+							<?= $element['content'] ?>
+						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Loading
+						</h4>
+						<button class="loading <?= $element['class'] ?>">
 							<?= $element['content'] ?>
 						</button>
 					</li>

@@ -1,14 +1,13 @@
 <?php
 
 $modules = [
-	// 'navigation',
 	'color-guide',
 	'misc-guide',
 	'spacing-guide',
 	'ui-elements-guide',
 	// 'forms-guide',
-	// 'typography-guide',
-	// 'typography-voices'
+	'typography-guide',
+	'voices-guide'
 ];
 
 function showErrors()
@@ -54,11 +53,24 @@ showErrors();
 				<p>
 					These are the design tokens used to create the visual design of this site.
 				</p>
+
+				<nav class="guide-nav">
+					<ul>
+						<?php foreach ($modules as $module) { ?>
+							<li>
+								<a href="#<?= $module ?>" class="text">
+									<?= ucwords(str_replace('-', ' ', $module)) ?>
+								</a>
+							</li>
+						<?php } ?>
+
+					</ul>
+				</nav>
 			</inner-column>
 		</section>
 
 		<?php foreach ($modules as $module) { ?>
-			<section>
+			<section id="<?= $module ?>">
 				<inner-column>
 					<?php include "modules/$module.php"; ?>
 				</inner-column>
