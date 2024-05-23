@@ -1,0 +1,1670 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en" class="special-magic no-js">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Style Guide</title>
+	<meta name="description" content="This contains design tokens that are used to create the visual design of the site. #todo" />
+	<meta property="og:image" content="$todo" />
+
+	<link rel="stylesheet" href="styles/site.css" />
+	</head>
+
+<body>
+	<header>
+		<inner-column>
+			<!-- <h1 class="site-title">Style Guide</h1> -->
+		</inner-column>
+	</header>
+
+	<main>
+		<section>
+			<inner-column>
+				<h1 class="booming-voice">Style Guide</h1>
+				<p>
+					These are the design tokens used to create the visual design of this site.
+				</p>
+
+				<nav class="guide-nav">
+					<ul>
+													<li>
+								<a href="#color-guide" class="text">
+									Color Guide								</a>
+							</li>
+													<li>
+								<a href="#misc-guide" class="text">
+									Misc Guide								</a>
+							</li>
+													<li>
+								<a href="#spacing-guide" class="text">
+									Spacing Guide								</a>
+							</li>
+													<li>
+								<a href="#ui-elements-guide" class="text">
+									Ui Elements Guide								</a>
+							</li>
+													<li>
+								<a href="#typography-guide" class="text">
+									Typography Guide								</a>
+							</li>
+													<li>
+								<a href="#voices-guide" class="text">
+									Voices Guide								</a>
+							</li>
+						
+					</ul>
+				</nav>
+			</inner-column>
+		</section>
+
+					<section id="color-guide">
+				<inner-column>
+					
+
+<style>
+	ul.color-groups {
+		display: grid;
+		gap: var(--space-l);
+		margin-top: var(--space-l);
+	}
+
+	ul.colors {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		gap: var(--space-s);
+
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+		}
+	}
+
+	ul.colors div.pallete {
+		width: 100%;
+		aspect-ratio: var(--ratio-square);
+		border-radius: var(--corners);
+		margin-bottom: var(--space-2xs);
+		background-color: var(--pallete);
+		background-image: var(--pallete-img);
+		/* text-align: center; */
+	}
+
+
+	ul.colors div.pallete.base {
+		outline: 5px solid var(--ink);
+	}
+
+
+	ul.colors div.pallete.noise {
+
+		filter: var(--noise-filter);
+	}
+</style>
+
+<div class="color-guide">
+	<h2 class="attention-voice">Colors</h2>
+	<p>
+		These are the colors used in the app. They are defined in
+		<code>settings.css</code> and are available as CSS variables which are
+		used throughout the app.
+	</p>
+
+	<ul class="color-groups">
+					<li>
+				<h3 class="notice-voice">
+					Base Colors				</h3>
+				<ul class="colors">
+											<li>
+							<h4 class="whisper-voice">
+								Paper							</h4>
+							<div class="pallete" style="--pallete: var(--paper);">
+							</div>
+							<p class="color-name">
+								<code>--paper</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Ink							</h4>
+							<div class="pallete" style="--pallete: var(--ink);">
+							</div>
+							<p class="color-name">
+								<code>--ink</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Grays				</h3>
+				<ul class="colors">
+											<li>
+							<h4 class="whisper-voice">
+								Gray Lightest							</h4>
+							<div class="pallete" style="--pallete: var(--gray-lightest);">
+							</div>
+							<p class="color-name">
+								<code>--gray-lightest</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Gray Lighter							</h4>
+							<div class="pallete" style="--pallete: var(--gray-lighter);">
+							</div>
+							<p class="color-name">
+								<code>--gray-lighter</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Gray Light							</h4>
+							<div class="pallete" style="--pallete: var(--gray-light);">
+							</div>
+							<p class="color-name">
+								<code>--gray-light</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Gray							</h4>
+							<div class="base pallete" style="--pallete: var(--gray);">
+							</div>
+							<p class="color-name">
+								<code>--gray</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Gray Dark							</h4>
+							<div class="pallete" style="--pallete: var(--gray-dark);">
+							</div>
+							<p class="color-name">
+								<code>--gray-dark</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Gray Darker							</h4>
+							<div class="pallete" style="--pallete: var(--gray-darker);">
+							</div>
+							<p class="color-name">
+								<code>--gray-darker</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Gray Darkest							</h4>
+							<div class="pallete" style="--pallete: var(--gray-darkest);">
+							</div>
+							<p class="color-name">
+								<code>--gray-darkest</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Primary Color				</h3>
+				<ul class="colors">
+											<li>
+							<h4 class="whisper-voice">
+								Primary Lightest							</h4>
+							<div class="pallete" style="--pallete: var(--color-lightest);">
+							</div>
+							<p class="color-name">
+								<code>--color-lightest</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Primary Lighter							</h4>
+							<div class="pallete" style="--pallete: var(--color-lighter);">
+							</div>
+							<p class="color-name">
+								<code>--color-lighter</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Primary Light							</h4>
+							<div class="pallete" style="--pallete: var(--color-light);">
+							</div>
+							<p class="color-name">
+								<code>--color-light</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Primary							</h4>
+							<div class="base pallete" style="--pallete: var(--color);">
+							</div>
+							<p class="color-name">
+								<code>--color</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Primary Dark							</h4>
+							<div class="pallete" style="--pallete: var(--color-dark);">
+							</div>
+							<p class="color-name">
+								<code>--color-dark</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Primary Darker							</h4>
+							<div class="pallete" style="--pallete: var(--color-darker);">
+							</div>
+							<p class="color-name">
+								<code>--color-darker</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Primary Darkest							</h4>
+							<div class="pallete" style="--pallete: var(--color-darkest);">
+							</div>
+							<p class="color-name">
+								<code>--color-darkest</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Highlight Color				</h3>
+				<ul class="colors">
+											<li>
+							<h4 class="whisper-voice">
+								Highlight Lightest							</h4>
+							<div class="pallete" style="--pallete: var(--highlight-lightest);">
+							</div>
+							<p class="color-name">
+								<code>--highlight-lightest</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Highlight Lighter							</h4>
+							<div class="pallete" style="--pallete: var(--highlight-lighter);">
+							</div>
+							<p class="color-name">
+								<code>--highlight-lighter</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Highlight Light							</h4>
+							<div class="pallete" style="--pallete: var(--highlight-light);">
+							</div>
+							<p class="color-name">
+								<code>--highlight-light</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Highlight							</h4>
+							<div class="base pallete" style="--pallete: var(--highlight);">
+							</div>
+							<p class="color-name">
+								<code>--highlight</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Highlight Dark							</h4>
+							<div class="pallete" style="--pallete: var(--highlight-dark);">
+							</div>
+							<p class="color-name">
+								<code>--highlight-dark</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Highlight Darker							</h4>
+							<div class="pallete" style="--pallete: var(--highlight-darker);">
+							</div>
+							<p class="color-name">
+								<code>--highlight-darker</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Highlight Darkest							</h4>
+							<div class="pallete" style="--pallete: var(--highlight-darkest);">
+							</div>
+							<p class="color-name">
+								<code>--highlight-darkest</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Accent Color				</h3>
+				<ul class="colors">
+											<li>
+							<h4 class="whisper-voice">
+								Accent Lightest							</h4>
+							<div class="pallete" style="--pallete: var(--accent-lightest);">
+							</div>
+							<p class="color-name">
+								<code>--accent-lightest</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Accent Lighter							</h4>
+							<div class="pallete" style="--pallete: var(--accent-lighter);">
+							</div>
+							<p class="color-name">
+								<code>--accent-lighter</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Accent Light							</h4>
+							<div class="pallete" style="--pallete: var(--accent-light);">
+							</div>
+							<p class="color-name">
+								<code>--accent-light</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Accent							</h4>
+							<div class="base pallete" style="--pallete: var(--accent);">
+							</div>
+							<p class="color-name">
+								<code>--accent</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Accent Dark							</h4>
+							<div class="pallete" style="--pallete: var(--accent-dark);">
+							</div>
+							<p class="color-name">
+								<code>--accent-dark</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Accent Darker							</h4>
+							<div class="pallete" style="--pallete: var(--accent-darker);">
+							</div>
+							<p class="color-name">
+								<code>--accent-darker</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Accent Darkest							</h4>
+							<div class="pallete" style="--pallete: var(--accent-darkest);">
+							</div>
+							<p class="color-name">
+								<code>--accent-darkest</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Semantic Colors				</h3>
+				<ul class="colors">
+											<li>
+							<h4 class="whisper-voice">
+								Success							</h4>
+							<div class="pallete" style="--pallete: var(--success);">
+							</div>
+							<p class="color-name">
+								<code>--success</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Warning							</h4>
+							<div class="pallete" style="--pallete: var(--warning);">
+							</div>
+							<p class="color-name">
+								<code>--warning</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Error							</h4>
+							<div class="pallete" style="--pallete: var(--error);">
+							</div>
+							<p class="color-name">
+								<code>--error</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Info							</h4>
+							<div class="pallete" style="--pallete: var(--info);">
+							</div>
+							<p class="color-name">
+								<code>--info</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Gradients				</h3>
+				<ul class="colors">
+											<li>
+							<h4 class="whisper-voice">
+								Gradient Dark							</h4>
+							<div class="pallete" style=" --pallete-img: var(--gradient-dark);">
+							</div>
+							<p class="color-name">
+								<code>--gradient-dark</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Gradient Light							</h4>
+							<div class="pallete" style=" --pallete-img: var(--gradient-light);">
+							</div>
+							<p class="color-name">
+								<code>--gradient-light</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Gradient Color							</h4>
+							<div class="pallete" style=" --pallete-img: var(--gradient-color);">
+							</div>
+							<p class="color-name">
+								<code>--gradient-color</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Patterns				</h3>
+				<ul class="colors">
+											<li>
+							<h4 class="whisper-voice">
+								Checkers							</h4>
+							<div class="pallete" style="--pallete: var(--gray); --pallete-img: var(--checkers);">
+							</div>
+							<p class="color-name">
+								<code>--checkers</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Diagnol							</h4>
+							<div class="pallete" style="--pallete: var(--gray); --pallete-img: var(--diagnol);">
+							</div>
+							<p class="color-name">
+								<code>--diagnol</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Points							</h4>
+							<div class="pallete" style="--pallete: var(--gray); --pallete-img: var(--points);">
+							</div>
+							<p class="color-name">
+								<code>--points</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Noise							</h4>
+							<div class="noise pallete" style="--pallete: var(--gray); --pallete-img: var(--noise);">
+							</div>
+							<p class="color-name">
+								<code>--noise</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+			</ul>
+</div>				</inner-column>
+			</section>
+					<section id="misc-guide">
+				<inner-column>
+					
+<style>
+	ul.setting-groups {
+		display: grid;
+		gap: var(--space-l);
+		margin-top: var(--space-l);
+	}
+
+
+	ul.misc-settings {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		gap: var(--space-s);
+
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+		}
+
+
+
+		div.setting-pallete {
+			width: 100%;
+			aspect-ratio: var(--ratio-square);
+		}
+	}
+</style>
+
+<div class="misc-guide">
+	<h2 class="attention-voice">Borders, Shadows and Miscellaneus</h2>
+	<p>
+		These are the styles used in the app. They are defined in
+		<code>settings.css</code> and are available as CSS variables and classes
+		which are used throughout the app.
+	</p>
+	<!-- <ul class="settings" v-for="settingGroup in settings">
+      <li v-for="setting in settingGroup" :key="setting.name">
+        <div :class="setting.name">
+          <code>{{ setting.variable }}</code>
+        </div>
+      </li>
+    </ul> -->
+
+	<ul class="setting-groups">
+					<li>
+				<h3 class="notice-voice">
+					Borders				</h3>
+				<ul class="misc-settings">
+											<li>
+							<h4 class="whisper-voice">
+								Border							</h4>
+							<div class="setting-pallete" style="border: var(--border);">
+							</div>
+							<p class="setting-name">
+								<code>--border</code>
+							</p>
+
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Border light							</h4>
+							<div class="setting-pallete" style="border: var(--border-light);">
+							</div>
+							<p class="setting-name">
+								<code>--border-light</code>
+							</p>
+
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Border Color							</h4>
+							<div class="setting-pallete" style="border: var(--border-color);">
+							</div>
+							<p class="setting-name">
+								<code>--border-color</code>
+							</p>
+
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Border Highlight							</h4>
+							<div class="setting-pallete" style="border: var(--border-highlight);">
+							</div>
+							<p class="setting-name">
+								<code>--border-highlight</code>
+							</p>
+
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Border gradient							</h4>
+							<div class="setting-pallete" style="border-image: var(--border-gradient);">
+							</div>
+							<p class="setting-name">
+								<code>--border-gradient</code>
+							</p>
+
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Shadows				</h3>
+				<ul class="misc-settings">
+											<li>
+							<h4 class="whisper-voice">
+								Shadow							</h4>
+							<div class="setting-pallete" style="box-shadow: var(--shadow);">
+							</div>
+							<p class="setting-name">
+								<code>--shadow</code>
+							</p>
+
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Shadow Inner							</h4>
+							<div class="setting-pallete" style="box-shadow: var(--shadow-inner);">
+							</div>
+							<p class="setting-name">
+								<code>--shadow-inner</code>
+							</p>
+
+						</li>
+									</ul>
+			</li>
+		</div>				</inner-column>
+			</section>
+					<section id="spacing-guide">
+				<inner-column>
+					
+<style>
+	ul.spaces {
+		margin-top: var(--space-l);
+	}
+
+	.space-guide li {
+		display: grid;
+		grid-template-columns: 0.5fr 1fr 1fr;
+		gap: var(--space-s);
+		/* grid-template-rows: var(--space-3xl); */
+		align-items: center;
+		justify-items: start;
+		/* margin-top: var(--space-xs); */
+
+		code {
+			white-space: nowrap;
+		}
+	}
+
+	div.space-pallete {
+		height: var(--space-m);
+		background: var(--color);
+	}
+
+	.space-guide {
+		p+p {
+			margin-top: 0;
+		}
+	}
+</style>
+
+
+
+<div class="space-guide">
+	<h2 class="attention-voice">Spacing</h2>
+	<p>
+		These are the spacing values used in the app. They are defined in
+		<code>settings.css</code> and are available as CSS variables which are
+		used throughout the app for
+		<span class="highlight">Margins, Paddings and Gaps</span>
+	</p>
+	<ul class="spaces">
+					<li>
+				<p>
+					XXXS				</p>
+
+
+				<p>
+					<code>
+						--space-3xs					</code>
+
+				</p>
+				<div class="space-pallete" style="width: var(--space-3xs)"></div>
+			</li>
+					<li>
+				<p>
+					XXS				</p>
+
+
+				<p>
+					<code>
+						--space-2xs					</code>
+
+				</p>
+				<div class="space-pallete" style="width: var(--space-2xs)"></div>
+			</li>
+					<li>
+				<p>
+					XS				</p>
+
+
+				<p>
+					<code>
+						--space-xs					</code>
+
+				</p>
+				<div class="space-pallete" style="width: var(--space-xs)"></div>
+			</li>
+					<li>
+				<p>
+					S				</p>
+
+
+				<p>
+					<code>
+						--space-s					</code>
+
+				</p>
+				<div class="space-pallete" style="width: var(--space-s)"></div>
+			</li>
+					<li>
+				<p>
+					M				</p>
+
+
+				<p>
+					<code>
+						--space-m					</code>
+
+				</p>
+				<div class="space-pallete" style="width: var(--space-m)"></div>
+			</li>
+					<li>
+				<p>
+					L				</p>
+
+
+				<p>
+					<code>
+						--space-l					</code>
+
+				</p>
+				<div class="space-pallete" style="width: var(--space-l)"></div>
+			</li>
+					<li>
+				<p>
+					XL				</p>
+
+
+				<p>
+					<code>
+						--space-xl					</code>
+
+				</p>
+				<div class="space-pallete" style="width: var(--space-xl)"></div>
+			</li>
+					<li>
+				<p>
+					XXL				</p>
+
+
+				<p>
+					<code>
+						--space-2xl					</code>
+
+				</p>
+				<div class="space-pallete" style="width: var(--space-2xl)"></div>
+			</li>
+					<li>
+				<p>
+					XXXL				</p>
+
+
+				<p>
+					<code>
+						--space-3xl					</code>
+
+				</p>
+				<div class="space-pallete" style="width: var(--space-3xl)"></div>
+			</li>
+		
+	</ul>
+</div>
+
+<script>
+	function getPixel(name) {
+		const div = document.querySelector(`div.${name}`);
+		const style = window.getComputedStyle(div);
+		const width = style.getPropertyValue("width");
+		return width;
+	}
+</script>				</inner-column>
+			</section>
+					<section id="ui-elements-guide">
+				<inner-column>
+					
+
+<style>
+	ul.element-groups {
+		display: grid;
+		gap: var(--space-l);
+		margin-top: var(--space-l);
+
+
+	}
+
+	ul.elements {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-s);
+		margin-top: var(--space-s);
+
+		li {
+			flex: 1;
+		}
+
+
+		@media (min-width: 768px) {
+			/* grid-template-columns: 1fr 1fr 1fr 1fr; */
+		}
+	}
+</style>
+
+
+<div class="ui-elements-guide">
+	<h2 class="attention-voice">UI Elements</h2>
+	<p>
+		These are the UI elements used in the app. They are defined in
+		<code>settings.css</code> and are available as CSS variables and classes
+		which are used throughout the app.
+	</p>
+
+	<ul class="element-groups">
+					<li>
+				<h3 class="notice-voice">
+					Primary Button				</h3>
+				<p class="element-name">
+					<code>.button</code>
+				</p>
+				<ul class="elements">
+					<li>
+						<h4 class="whisper-voice">
+							Default
+						</h4>
+						<button class="default button">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Hover
+						</h4>
+						<button class="hover button">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Active
+						</h4>
+						<button class="active button">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Loading
+						</h4>
+						<button class="loading button">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Disabled
+						</h4>
+						<button disabled class="disabled button">
+							Button						</button>
+					</li>
+				</ul>
+
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Outline Button				</h3>
+				<p class="element-name">
+					<code>.button outline</code>
+				</p>
+				<ul class="elements">
+					<li>
+						<h4 class="whisper-voice">
+							Default
+						</h4>
+						<button class="default button outline">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Hover
+						</h4>
+						<button class="hover button outline">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Active
+						</h4>
+						<button class="active button outline">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Loading
+						</h4>
+						<button class="loading button outline">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Disabled
+						</h4>
+						<button disabled class="disabled button outline">
+							Button						</button>
+					</li>
+				</ul>
+
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Icon Button				</h3>
+				<p class="element-name">
+					<code>.button icon</code>
+				</p>
+				<ul class="elements">
+					<li>
+						<h4 class="whisper-voice">
+							Default
+						</h4>
+						<button class="default button icon">
+							⋯						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Hover
+						</h4>
+						<button class="hover button icon">
+							⋯						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Active
+						</h4>
+						<button class="active button icon">
+							⋯						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Loading
+						</h4>
+						<button class="loading button icon">
+							⋯						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Disabled
+						</h4>
+						<button disabled class="disabled button icon">
+							⋯						</button>
+					</li>
+				</ul>
+
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Text Button/Link				</h3>
+				<p class="element-name">
+					<code>.text</code>
+				</p>
+				<ul class="elements">
+					<li>
+						<h4 class="whisper-voice">
+							Default
+						</h4>
+						<button class="default text">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Hover
+						</h4>
+						<button class="hover text">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Active
+						</h4>
+						<button class="active text">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Loading
+						</h4>
+						<button class="loading text">
+							Button						</button>
+					</li>
+					<li>
+						<h4 class="whisper-voice">
+							Disabled
+						</h4>
+						<button disabled class="disabled text">
+							Button						</button>
+					</li>
+				</ul>
+
+			</li>
+			</ul>
+</div>				</inner-column>
+			</section>
+					<section id="typography-guide">
+				<inner-column>
+					
+
+<style>
+	ul.typography-groups {
+		display: grid;
+		gap: var(--space-l);
+		margin-top: var(--space-l);
+	}
+
+	ul.typography-settings {
+		display: grid;
+		/* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+		gap: var(--space-s);
+	}
+
+	div.type-pallete {
+		border: var(--border);
+		padding: var(--space-s);
+		font-size: var(--font-size-2);
+
+	}
+</style>
+
+
+<div class="typography-guide">
+	<h2 class="attention-voice">Typography</h2>
+	<p>
+		These are the typography settings used in the app. They are defined in
+		<code>settings.css</code> and are available as CSS variables which are
+		used throughout the app.
+	</p>
+
+	<ul class="typography-groups">
+					<li>
+				<h3 class="notice-voice">
+					Font Family				</h3>
+				<ul class="typography-settings">
+											<li>
+							<h4 class="whisper-voice">
+								Headings							</h4>
+							<div class="type-pallete" style="font-family: var(--font-head);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-head								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Body							</h4>
+							<div class="type-pallete" style="font-family: var(--font-body);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-body								</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Font Weights				</h3>
+				<ul class="typography-settings">
+											<li>
+							<h4 class="whisper-voice">
+								Light							</h4>
+							<div class="type-pallete" style="font-weight: var(--weight-light);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--weight-light								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Regular							</h4>
+							<div class="type-pallete" style="font-weight: var(--weight-regular);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--weight-regular								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Heavy							</h4>
+							<div class="type-pallete" style="font-weight: var(--weight-heavy);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--weight-heavy								</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Line Heights				</h3>
+				<ul class="typography-settings">
+											<li>
+							<h4 class="whisper-voice">
+								Heading							</h4>
+							<div class="type-pallete" style="line-height: var(--line-height-head);">
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in turpis nec felis ultricies ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in turpis nec felis ultricies ultricies.								</span>
+							</div>
+							<p>
+								<code>
+									--line-height-head								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Body							</h4>
+							<div class="type-pallete" style="line-height: var(--line-height-body);">
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in turpis nec felis ultricies ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in turpis nec felis ultricies ultricies.								</span>
+							</div>
+							<p>
+								<code>
+									--line-height-body								</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Letter Spacing				</h3>
+				<ul class="typography-settings">
+											<li>
+							<h4 class="whisper-voice">
+								Heading							</h4>
+							<div class="type-pallete" style="letter-spacing: var(--letter-spacing-head);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--letter-spacing-head								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Body							</h4>
+							<div class="type-pallete" style="letter-spacing: var(--letter-spacing-body);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--letter-spacing-body								</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+					<li>
+				<h3 class="notice-voice">
+					Font Sizes				</h3>
+				<ul class="typography-settings">
+											<li>
+							<h4 class="whisper-voice">
+								Step -3							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size--3);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size--3								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Step -2							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size--2);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size--2								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Step -1							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size--1);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size--1								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Step 0							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size-0);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size-0								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Step 1							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size-1);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size-1								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Step 2							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size-2);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size-2								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Step 3							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size-3);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size-3								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Step 4							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size-4);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size-4								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Step 5							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size-5);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size-5								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Step 6							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size-6);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size-6								</code>
+							</p>
+						</li>
+											<li>
+							<h4 class="whisper-voice">
+								Step 7							</h4>
+							<div class="type-pallete" style="font-size: var(--font-size-7);">
+								<span>
+									The quick brown fox jumps over the lazy dog.								</span>
+							</div>
+							<p>
+								<code>
+									--font-size-7								</code>
+							</p>
+						</li>
+									</ul>
+			</li>
+			</ul>
+</div>				</inner-column>
+			</section>
+					<section id="voices-guide">
+				<inner-column>
+					
+<style>
+	.text-voices ul {
+		display: grid;
+		gap: var(--space-2xl);
+		margin-top: var(--space-l);
+	}
+</style>
+
+
+<div class="text-voices">
+	<h2 class="attention-voice">Text Voices</h2>
+	<ul>
+
+
+					<li>
+				<div class="voice-card micro-voice">
+					<h3>
+						<code>
+							micro-voice						</code>
+					</h3>
+					<p class="micro-voice">
+						this is a <em>regular emphasis</em> sentence.
+					</p>
+					<p class="micro-voice">
+						This is a <strong>strong emphasis</strong> sentence.
+					</p>
+					<p class="micro-voice">
+						This is a
+						<strong><em>strong and regular emphasis</em></strong> sentence.
+					</p>
+					<p class="micro-voice">
+						This is a sentence with a <mark class="highlight">highlight </mark>.
+					</p>
+					<p class="micro-voice">
+						these <a href="?page=style-guide#"> are links </a> in the paragraph.
+					</p>
+					<p class="micro-voice" class="wrap">
+						This is a paragraph that should wrap to the next line. lorem ipsum
+						dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+						Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra
+						nec consectetur ante hendrerit.
+					</p>
+				</div>
+			</li>
+					<li>
+				<div class="voice-card solid-voice">
+					<h3>
+						<code>
+							solid-voice						</code>
+					</h3>
+					<p class="solid-voice">
+						this is a <em>regular emphasis</em> sentence.
+					</p>
+					<p class="solid-voice">
+						This is a <strong>strong emphasis</strong> sentence.
+					</p>
+					<p class="solid-voice">
+						This is a
+						<strong><em>strong and regular emphasis</em></strong> sentence.
+					</p>
+					<p class="solid-voice">
+						This is a sentence with a <mark class="highlight">highlight </mark>.
+					</p>
+					<p class="solid-voice">
+						these <a href="?page=style-guide#"> are links </a> in the paragraph.
+					</p>
+					<p class="solid-voice" class="wrap">
+						This is a paragraph that should wrap to the next line. lorem ipsum
+						dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+						Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra
+						nec consectetur ante hendrerit.
+					</p>
+				</div>
+			</li>
+					<li>
+				<div class="voice-card whisper-voice">
+					<h3>
+						<code>
+							whisper-voice						</code>
+					</h3>
+					<p class="whisper-voice">
+						this is a <em>regular emphasis</em> sentence.
+					</p>
+					<p class="whisper-voice">
+						This is a <strong>strong emphasis</strong> sentence.
+					</p>
+					<p class="whisper-voice">
+						This is a
+						<strong><em>strong and regular emphasis</em></strong> sentence.
+					</p>
+					<p class="whisper-voice">
+						This is a sentence with a <mark class="highlight">highlight </mark>.
+					</p>
+					<p class="whisper-voice">
+						these <a href="?page=style-guide#"> are links </a> in the paragraph.
+					</p>
+					<p class="whisper-voice" class="wrap">
+						This is a paragraph that should wrap to the next line. lorem ipsum
+						dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+						Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra
+						nec consectetur ante hendrerit.
+					</p>
+				</div>
+			</li>
+					<li>
+				<div class="voice-card calm-voice">
+					<h3>
+						<code>
+							calm-voice						</code>
+					</h3>
+					<p class="calm-voice">
+						this is a <em>regular emphasis</em> sentence.
+					</p>
+					<p class="calm-voice">
+						This is a <strong>strong emphasis</strong> sentence.
+					</p>
+					<p class="calm-voice">
+						This is a
+						<strong><em>strong and regular emphasis</em></strong> sentence.
+					</p>
+					<p class="calm-voice">
+						This is a sentence with a <mark class="highlight">highlight </mark>.
+					</p>
+					<p class="calm-voice">
+						these <a href="?page=style-guide#"> are links </a> in the paragraph.
+					</p>
+					<p class="calm-voice" class="wrap">
+						This is a paragraph that should wrap to the next line. lorem ipsum
+						dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+						Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra
+						nec consectetur ante hendrerit.
+					</p>
+				</div>
+			</li>
+					<li>
+				<div class="voice-card notice-voice">
+					<h3>
+						<code>
+							notice-voice						</code>
+					</h3>
+					<p class="notice-voice">
+						this is a <em>regular emphasis</em> sentence.
+					</p>
+					<p class="notice-voice">
+						This is a <strong>strong emphasis</strong> sentence.
+					</p>
+					<p class="notice-voice">
+						This is a
+						<strong><em>strong and regular emphasis</em></strong> sentence.
+					</p>
+					<p class="notice-voice">
+						This is a sentence with a <mark class="highlight">highlight </mark>.
+					</p>
+					<p class="notice-voice">
+						these <a href="?page=style-guide#"> are links </a> in the paragraph.
+					</p>
+					<p class="notice-voice" class="wrap">
+						This is a paragraph that should wrap to the next line. lorem ipsum
+						dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+						Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra
+						nec consectetur ante hendrerit.
+					</p>
+				</div>
+			</li>
+					<li>
+				<div class="voice-card firm-voice">
+					<h3>
+						<code>
+							firm-voice						</code>
+					</h3>
+					<p class="firm-voice">
+						this is a <em>regular emphasis</em> sentence.
+					</p>
+					<p class="firm-voice">
+						This is a <strong>strong emphasis</strong> sentence.
+					</p>
+					<p class="firm-voice">
+						This is a
+						<strong><em>strong and regular emphasis</em></strong> sentence.
+					</p>
+					<p class="firm-voice">
+						This is a sentence with a <mark class="highlight">highlight </mark>.
+					</p>
+					<p class="firm-voice">
+						these <a href="?page=style-guide#"> are links </a> in the paragraph.
+					</p>
+					<p class="firm-voice" class="wrap">
+						This is a paragraph that should wrap to the next line. lorem ipsum
+						dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+						Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra
+						nec consectetur ante hendrerit.
+					</p>
+				</div>
+			</li>
+					<li>
+				<div class="voice-card attention-voice">
+					<h3>
+						<code>
+							attention-voice						</code>
+					</h3>
+					<p class="attention-voice">
+						this is a <em>regular emphasis</em> sentence.
+					</p>
+					<p class="attention-voice">
+						This is a <strong>strong emphasis</strong> sentence.
+					</p>
+					<p class="attention-voice">
+						This is a
+						<strong><em>strong and regular emphasis</em></strong> sentence.
+					</p>
+					<p class="attention-voice">
+						This is a sentence with a <mark class="highlight">highlight </mark>.
+					</p>
+					<p class="attention-voice">
+						these <a href="?page=style-guide#"> are links </a> in the paragraph.
+					</p>
+					<p class="attention-voice" class="wrap">
+						This is a paragraph that should wrap to the next line. lorem ipsum
+						dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+						Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra
+						nec consectetur ante hendrerit.
+					</p>
+				</div>
+			</li>
+					<li>
+				<div class="voice-card loud-voice">
+					<h3>
+						<code>
+							loud-voice						</code>
+					</h3>
+					<p class="loud-voice">
+						this is a <em>regular emphasis</em> sentence.
+					</p>
+					<p class="loud-voice">
+						This is a <strong>strong emphasis</strong> sentence.
+					</p>
+					<p class="loud-voice">
+						This is a
+						<strong><em>strong and regular emphasis</em></strong> sentence.
+					</p>
+					<p class="loud-voice">
+						This is a sentence with a <mark class="highlight">highlight </mark>.
+					</p>
+					<p class="loud-voice">
+						these <a href="?page=style-guide#"> are links </a> in the paragraph.
+					</p>
+					<p class="loud-voice" class="wrap">
+						This is a paragraph that should wrap to the next line. lorem ipsum
+						dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+						Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra
+						nec consectetur ante hendrerit.
+					</p>
+				</div>
+			</li>
+					<li>
+				<div class="voice-card booming-voice">
+					<h3>
+						<code>
+							booming-voice						</code>
+					</h3>
+					<p class="booming-voice">
+						this is a <em>regular emphasis</em> sentence.
+					</p>
+					<p class="booming-voice">
+						This is a <strong>strong emphasis</strong> sentence.
+					</p>
+					<p class="booming-voice">
+						This is a
+						<strong><em>strong and regular emphasis</em></strong> sentence.
+					</p>
+					<p class="booming-voice">
+						This is a sentence with a <mark class="highlight">highlight </mark>.
+					</p>
+					<p class="booming-voice">
+						these <a href="?page=style-guide#"> are links </a> in the paragraph.
+					</p>
+					<p class="booming-voice" class="wrap">
+						This is a paragraph that should wrap to the next line. lorem ipsum
+						dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+						Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra
+						nec consectetur ante hendrerit.
+					</p>
+				</div>
+			</li>
+		
+
+
+	</ul>
+</div>				</inner-column>
+			</section>
+		
+	</main>
+
+	<footer>
+		<inner-column>
+			<h1 class="loud-voice">Footer</h1>
+		</inner-column>
+	</footer>
+</body>
+
+</html>
